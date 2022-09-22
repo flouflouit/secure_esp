@@ -136,7 +136,7 @@ We use mqtts and port 8883 for a secure connection over TLS.
     - Function
         - saves the message as url into the non-volatile storage
         - the url will be effective if the MQTT topic use_url is set to 1
-    - Example: ```mosquitto_pub -h $IP -t "/esp/update/url" -m "https://domain.de/secure_esp.bin" -p 8883 -d --cert client.crt --key client.key --cafile ca.crt```
+    - Example: ```mosquitto_pub -h $IP -t "/esp/update/url" -m "https://domain.de:8070/secure_esp.bin" -p 8883 -d --cert client.crt --key client.key --cafile ca.crt```
 
 - /esp/update/use_url - Publish Topic
     - Function
@@ -165,7 +165,7 @@ We use mqtts and port 8883 for a secure connection over TLS.
         - restart of the ESP32
     - Message
         - None
-    - Example: ```mosquitto_pub -h $IP -t "/esp/update/restart" -m "" -p 8883 -d --cert client.crt --key client.key --cafile ca.crt```
+    - Example: ```mosquitto_pub -h $IP -t "/esp/restart" -m "" -p 8883 -d --cert client.crt --key client.key --cafile ca.crt```
    
 
 - /esp/log - Subscribe Topic
